@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#978585"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtapp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="31dp"
+        android:text="Simple calculator app"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtdisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtdisplay"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="124dp"
+        android:text="Display"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/txtapp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtfirstnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Enter first number"
+        app:layout_constraintStart_toStartOf="@+id/txtdisplay"
+        app:layout_constraintTop_toBottomOf="@+id/txtdisplay" />
+
+    <EditText
+        android:id="@+id/edtsecondnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Enter second number"
+        app:layout_constraintStart_toStartOf="@+id/edtfirstnumber"
+        app:layout_constraintTop_toBottomOf="@+id/edtfirstnumber" />
+
+    <Button
+        android:id="@+id/btnadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toTopOf="@+id/btn_multiply"
+        app:layout_constraintEnd_toEndOf="@+id/btn_multiply"
+        app:layout_constraintStart_toStartOf="@+id/btn_multiply" />
+
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginBottom="173dp"
+        android:text="MULTIPLY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtsecondnumber" />
+
+    <Button
+        android:id="@+id/btnsubtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="42dp"
+        android:text="SUBTRACTION"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtsecondnumber" />
+
+    <Button
+        android:id="@+id/btndivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="65dp"
+        android:text="DIVISION"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsubtraction" />
+</androidx.constraintlayout.widget.ConstraintLayout>
